@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfflineFaceDetection", "Off
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineFaceDetection", "OnlineFaceDetection\OnlineFaceDetection.csproj", "{28069382-883D-488C-8A96-A2A111BF780F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PublicClassLibrary", "PublicClassLibrary\PublicClassLibrary.csproj", "{9F647515-BD17-4B3C-9020-A05B36C38AA3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{28069382-883D-488C-8A96-A2A111BF780F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28069382-883D-488C-8A96-A2A111BF780F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28069382-883D-488C-8A96-A2A111BF780F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F647515-BD17-4B3C-9020-A05B36C38AA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F647515-BD17-4B3C-9020-A05B36C38AA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F647515-BD17-4B3C-9020-A05B36C38AA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F647515-BD17-4B3C-9020-A05B36C38AA3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
