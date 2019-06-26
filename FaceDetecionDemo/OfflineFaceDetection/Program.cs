@@ -68,9 +68,9 @@ namespace OfflineFaceDetection
             //取平均值
             double y_AverageOf60and67 = (mouth_lip_upper_outer_6.y + mouth_lip_upper_inner_6.y) / 2;
             double y_AverageOf70and64 = (mouth_lip_lower_inner_6.y + mouth_lip_lower_outer_6.y) / 2;
-
             double distanceOfPixel = y_AverageOf70and64 - y_AverageOf60and67;
-            Console.WriteLine("上嘴唇与下嘴唇的像素距离是：{0}", distanceOfPixel);
+            Console.WriteLine("上嘴唇中部与下嘴唇中部的像素距离是：{0}", distanceOfPixel);
+            Console.WriteLine("上嘴唇下部与下嘴唇上部的像素距离是：{0}", mouth_lip_lower_inner_6.y - mouth_lip_upper_inner_6.y);
 
 
 
