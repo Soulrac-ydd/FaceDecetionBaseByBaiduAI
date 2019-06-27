@@ -1,21 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
+using System.Windows.Forms;
 
 namespace PublicClassLibrary
 {
     public class Tools
     {
-        public static string ImgToBase64String(Bitmap bmp)
+        public static string BmpToBase64String(string picDir)
         {
             try
             {
+                Bitmap bmp = new Bitmap(picDir);
                 MemoryStream ms = new MemoryStream();
-                bmp.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                bmp.Save(ms, ImageFormat.Png);
                 byte[] arr = new byte[ms.Length];
                 ms.Position = 0;
                 ms.Read(arr, 0, (int)ms.Length);
@@ -26,6 +30,28 @@ namespace PublicClassLibrary
             {
                 Console.WriteLine(e);
                 return null;
+            }
+        }
+
+        public static Bitmap BytesToBitmap(byte[] bytes)
+        {
+            MemoryStream stream = null;
+            try
+            {
+                stream = new MemoryStream(bytes);
+                return new Bitmap((Image)new Bitmap(stream));
+            }
+            catch (ArgumentNullException ex)
+            {
+                throw ex;
+            }
+            catch (ArgumentException ex)
+            {;
+                throw ex;
+            }
+            finally
+            {
+                stream.Close();
             }
         }
 
