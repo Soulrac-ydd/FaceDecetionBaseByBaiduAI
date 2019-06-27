@@ -9,8 +9,27 @@ using System.Threading.Tasks;
 
 namespace PublicClassLibrary
 {
-    class Tools
+    public class Tools
     {
+        public static string ImgToBase64String(Bitmap bmp)
+        {
+            try
+            {
+                MemoryStream ms = new MemoryStream();
+                bmp.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                byte[] arr = new byte[ms.Length];
+                ms.Position = 0;
+                ms.Read(arr, 0, (int)ms.Length);
+                ms.Close();
+                return Convert.ToBase64String(arr);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return null;
+            }
+        }
+
         [Obsolete("该函数待完成,请勿使用！")]
         public static string ToBase64(string picDir)
         {
