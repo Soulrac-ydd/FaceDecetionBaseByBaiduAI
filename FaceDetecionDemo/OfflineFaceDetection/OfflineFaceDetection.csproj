@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{422D8F88-2151-4B4E-A5DF-CF6BEEF5F693}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>OfflineFaceDetection</RootNamespace>
     <AssemblyName>OfflineFaceDetection</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
